@@ -1,0 +1,24 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+html,body{width: 100%;height: auto;}
+body{background: }
+#wrap{width: 1000px;height: auto;margin: 0 auto;}
+
+.tc{text-align: center;}
+.tr{text-align: right;}
+.tl{text-align: left;}
+li{list-style: none;}
+
+header{width: 100%;height: 140px;padding: 20px;}
+.logo{margin: 0 200px 0 0;float: left;}
+.topmenu{width: 360px;height: 30px;float: left;border-top: 1px solid;
+    border-bottom: 1px solid;}
+.topmenu > li{width: 25%;height: inherit;float: left;line-height: 30px;
+}
+.topmenu> li:hover{background: rgb(251, 239, 239);border-bottom: 2px solid rgb(112, 98, 76);}
+.botmenu{width: 100%;height: 60px;line-height: 60px;clear: both;}
+.botmenu > li:hover{}
+.botmenu > li{width: 12.5%;height: 60px;float: left;margin: 20px 0;}
+.botmenu > li> ul{height: 0;width: 120%;background: rgb(251, 239, 239);
+overflow: hidden;
+}
+.botmenu > li:hover > ul{height: 240px;}
