@@ -2,7 +2,7 @@ var img = $(".slider");
 var cnt = 0;
 var max = img.length-1;
 function slide(){
-    $(img[cnt]).siblings().css({left:"100%"});
+    $(img[cnt]).siblings("img").css({left:"100%"});
     $(img[cnt]).animate({left:"-100%"},function(){
       $(this).css({left:"100%"})
     })
@@ -11,4 +11,4 @@ function slide(){
     if(cnt>max)cnt=0;
     $(img[cnt]).animate({left:"0"});
 }
-setInterval(slide,1500);
+setInterval(slide,2500);
