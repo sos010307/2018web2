@@ -1,6 +1,7 @@
 var img = $(".slider");
 var cnt = 0;
 var max = img.length-1;
+var ntctype = "";
 function slide(){
     $(img[cnt]).siblings("img").css({left:"100%"});
     $(img[cnt]).animate({left:"-100%"},function(){
@@ -11,9 +12,12 @@ function slide(){
     if(cnt>max)cnt=0;
     $(img[cnt]).animate({left:"0"});
 }
-setInterval(slide,2500);
+setInterval(slide,4000);
 
 $(".ntc > h3").on("click",function(){
-    $(this).addClass("selntc")
+    ntctype = $(this).attr("data");
+    $(this).addClass("selntc");
     $(this).siblings().removeClass("selntc");
+    $("."+ntctype).show();
+    $("."+ntctype).siblings(".ncnt").hide();
 })
