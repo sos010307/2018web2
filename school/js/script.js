@@ -12,3 +12,8 @@ function slide(){
     $(img[cnt]).animate({left:"0"});
 }
 setInterval(slide,2500);
+
+$(".ntc > h3").on("click",function(){
+    $(this).addClass("selntc")
+    $(this).siblings().removeClass("selntc");
+})
