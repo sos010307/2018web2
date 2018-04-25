@@ -11,16 +11,69 @@ var month = today.getMonth()+1;
 var year = today.getFullYear();
 var weekset = new Array('일요일','월요일','화요일','수요일','목요일','금요일','토요일');
 var week = today.getDay();
+var maxday = 0;
+
+function maxdays(month){
+    switch (month) {
+        case 2:
+            maxday=28;
+            break;
+        case 4:
+            maxday=30;
+            break;
+        case 6:
+            maxday=30;
+            break;
+        case 9:
+            maxday=30;
+            break;
+        case 11:
+            maxday=30;
+            break
+        default:
+            maxday=31;
+    }
+}
+$(window).on("load",maxdays(month));
 
 function getdate(){
     $(".year").html(year);
     $(".month").html(month);
     $(".date").html(date);
-    $(".dof").html(weekset[today.week]);
+    $(".dof").html(weekset[week]);
 }
 function nextday(){
-
+    date++;
+    if(date > maxday){
+        month++;
+        maxdays(month);
+        date = 1;
+        if(month > 12){
+            year++;
+            month = 1;
+        }
+    }
+    week++;
+    if(week > 6) week = 0;
+    getdate();
 }
+function prevday(){
+    date--;
+    if(date <= 0){
+        month--;
+        maxdays(month);
+        date = maxday;
+        if(month <= 0){
+            year--;
+            month = 12;
+        }
+    }
+    week--;
+    if(week < 0) week = 6;
+    getdate();
+}
+$(".prevday").click(prevday);
+$(".nextday").click(nextday);
 $(window).on("load",getdate)
 function slide(){
     $(img[cnt]).siblings(".slider").css({left:"100%"});
