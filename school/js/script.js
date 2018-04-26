@@ -33,6 +33,11 @@ function maxdays(month){
         default:
             maxday=31;
     }
+    if(year%4 == 0){
+        if(month==2){
+            maxday=29;
+        }
+    }
 }
 $(window).on("load",maxdays(month));
 
