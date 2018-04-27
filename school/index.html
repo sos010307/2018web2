@@ -8,20 +8,25 @@
     <title>Document</title>
 </head>
 <body>
+  <div id="popup">
+    <div id="login">
+      <button class="close tc">X</button>
+      <h1>LOGIN</h1>
+        <form>
+          I D :<input type="text" name="id" class="id" placeholder="아이디"><br><br>
+          PW :<input type="text" name="pw" class="pw" placeholder="비밀번호">
+          <button type="submit">로그인</button>
+        </form>
+    </div>
+  </div>
     <div id="wrap">
         <header>
             <div id="headwrap">
                 <img src="./images/selectImageView.png" class="logo" alt="sdhs logo">
                 <ul class="topmenu tc">
-                    <li>로그인</li>
+                    <li class="loginpop">로그인</li>
                     <li>회원가입</li>
                 </ul>
-                <div id="login">
-                    <form action="">
-                      <input type="text" name="id" class="id" placeholder="아이디">
-                      <input type="text" name="pw" class="pw" placeholder="비밀번호">
-                    </form>
-                </div>
             </div>
             <ul class="botmenu tc">
                 <li>학교소개

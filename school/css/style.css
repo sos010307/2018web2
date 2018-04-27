@@ -12,6 +12,11 @@ header *{box-sizing: border-box;}
 
 li{list-style: none;}
 
+#popup{position: fixed;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.64);z-index: 20;display: none;}
+#login{width: 300px;height: 200px;margin: 0 auto;margin-top: 200px;background: rgb(197, 255, 180);
+border: 2px solid rgb(100, 181, 0);padding: 30px;box-sizing: border-box;position: relative;}
+.close{position: absolute;background: white;right: 0;top: 0;width: 20px;cursor: pointer;}
+
 header{width: 100%;height: auto;}
 #headwrap{width: inherit;height: auto;padding: 20px 0 0 20px;box-sizing: border-box;}
 .logo{margin: 0 200px 40px 0;float: left;}

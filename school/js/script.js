@@ -105,5 +105,10 @@ function popslide(){
     if(cnt2>max2)cnt2=0;
     $(img2[cnt2]).fadeIn(1500);
 }
-
+$(".loginpop").click(function(){
+  $("#popup").show();
+})
+$("#login > button").click(function(){
+  $("#popup").hide();
+})
 setInterval(popslide,3000);
