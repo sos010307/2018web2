@@ -92,7 +92,7 @@ function slide(){
 setInterval(slide,4000);
 
 $(".ntc > .fl").on("click",function(){
-    ntctype = $(this).attr("data");
+    ntctype = $(this).attr("id");
     $(this).addClass("selntc");
     $(this).siblings().removeClass("selntc");
     $("."+ntctype).show();
