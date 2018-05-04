@@ -108,11 +108,11 @@ function popslide(){
 }
 $(".pop").click(function(){
     $("#popup").show();
-    classname = $(this).attr("class");
-    $("."+classname).show();
+    classname = $(this).attr("id");
+    $("."+classname+">div").show();
 })
 $("#login > .close.tc").click(function(){
   $("#popup").hide();
-  $("."+classname).hide();
+  $("."+classname+">div").hide();
 })
 setInterval(popslide,3000);
