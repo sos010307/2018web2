@@ -11,11 +11,22 @@
   <div id="popup">
     <div id="login">
       <button class="close tc">X</button>
-      <h1>LOGIN</h1>
-        <form>
-          I D :<input type="text" name="id" class="id" placeholder="아이디"><br><br>
-          PW :<input type="text" name="pw" class="pw" placeholder="비밀번호">
-          <button type="submit">로그인</button>
+        <form class="login">
+            <div>
+                <h1>LOGIN</h1>
+                I D :<input type="text" name="id" class="id" placeholder="아이디"><br><br>
+                PW :<input type="text" name="pw" class="pw" placeholder="비밀번호">
+              <button type="submit">로그인</button>
+            </div>
+        </form>
+        <form class="join">
+            <div>
+                <h1>JOIN</h1>
+                이름 :<input type="text" name="name" class="name" placeholder="이름"><br><br>
+                I D :<input type="text" name="id" class="id" placeholder="아이디"><br><br>
+                PW :<input type="text" name="pw" class="pw" placeholder="비밀번호">
+              <button type="submit">회원가입</button>
+            </div>
         </form>
     </div>
   </div>
@@ -24,8 +35,8 @@
             <div id="headwrap">
                 <img src="./images/selectImageView.png" class="logo" alt="sdhs logo">
                 <ul class="topmenu tc">
-                    <li class="loginpop">로그인</li>
-                    <li>회원가입</li>
+                    <li class="pop loginpop">로그인</li>
+                    <li class="pop joinpop">회원가입</li>
                 </ul>
             </div>
             <ul class="botmenu tc">

@@ -12,6 +12,7 @@ var year = today.getFullYear();
 var weekset = new Array('일요일','월요일','화요일','수요일','목요일','금요일','토요일');
 var week = today.getDay();
 var maxday = 0;
+var classname = "";
 
 function maxdays(month){
     switch (month) {
@@ -105,10 +106,13 @@ function popslide(){
     if(cnt2>max2)cnt2=0;
     $(img2[cnt2]).fadeIn(1500);
 }
-$(".loginpop").click(function(){
-  $("#popup").show();
+$(".pop").click(function(){
+    $("#popup").show();
+    classname = $(this).attr("class");
+    $("."+classname).show();
 })
-$("#login > button").click(function(){
+$("#login > .close.tc").click(function(){
   $("#popup").hide();
+  $("."+classname).hide();
 })
 setInterval(popslide,3000);
