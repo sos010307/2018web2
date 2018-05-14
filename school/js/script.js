@@ -63,6 +63,7 @@ function nextday(){
     if(week > 6) week = 0;
     getdate();
 }
+
 function prevday(){
     date--;
     if(date <= 0){
@@ -81,7 +82,20 @@ function prevday(){
 $(".prevday").click(prevday);
 $(".nextday").click(nextday);
 $(window).on("load",getdate)
+
+var slidecom = $(".slidecom");
+for(var i = 0;i<=max;i++){
+    slidecom.append('<div class="com fl"></div>');
+    var com = $(".com");
+}
+slidecom.css({width:60+com.length*30+"px"});
+function comcnt(cnt){
+    $(com[cnt]).css({background:"white"});
+    $(com[cnt]).siblings().css({background:"rgb(161, 161, 161)"})
+}
+
 function slide(){
+    clearInterval();
     $(img[cnt]).siblings(".slider").css({left:"100%"});
     $(img[cnt]).animate({left:"-100%"},function(){
         $(this).css({left:"100%"})
@@ -89,6 +103,7 @@ function slide(){
     cnt++;
     if(cnt>max)cnt=0;
     $(img[cnt]).animate({left:"0"});
+    comcnt(cnt);
 }
 setInterval(slide,4000);
 

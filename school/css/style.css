@@ -46,6 +46,11 @@ overflow: hidden;z-index: 12;position: relative;}
 left: 70%;top: 80px;}
 .slide_text{color: white;font-size: 36px;float: left;}
 .sdhs{color: yellow;font-size: 45px;font-weight: bold;}
+.slidecom{height: 50px;position: relative;z-index: 15;margin: 0 auto;top: 550px;
+background: rgba(0, 0, 0, 0.6);border-radius: 15px 15px 0 0;padding: 19px 30px;box-sizing: border-box;
+}
+.com{width: 12px;height: 12px;border-radius: 100%;background: rgb(161, 161, 161);line-height: 50px;display: inline-block;
+margin: 0 9px;cursor: pointer}
 
 .content{width: 700px;height: auto;float: left;}
 .content > div{margin: 5px;border: 1px solid rgb(182, 177, 177);float: left;}
