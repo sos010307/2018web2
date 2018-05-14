@@ -85,7 +85,7 @@ $(window).on("load",getdate)
 
 var slidecom = $(".slidecom");
 for(var i = 0;i<=max;i++){
-    slidecom.append('<div class="com fl"></div>');
+    slidecom.append('<div class="com fl" data='+i+'></div>');
     var com = $(".com");
 }
 slidecom.css({width:60+com.length*30+"px"});
