@@ -1,0 +1,9 @@
+*{margin: 0;padding:0;}
+html,body{width: 100%;height:100%;}
+body{background: black;}
+#wrap{width: 100%;height: 100%;}
+#slideBox{width: 1200px;height: 900px;position: relative;overflow: hidden;}
+#notice{position}
+
+.image{position: absolute;width: 100%;left: 100%;}
+.image:first-child{left: 0;}
